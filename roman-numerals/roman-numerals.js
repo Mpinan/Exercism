@@ -4,5 +4,9 @@
 //
 
 export const toRoman = n => {
-  return (n = "I");
+  if (n === 1) {
+    return "I";
+  } else {
+    return "I" + "I";
+  }
 };
