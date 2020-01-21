@@ -4,7 +4,7 @@
 //
 
 export const toRoman = n => {
-  let Letters = {
+  let list = {
     M: 1000,
     CM: 900,
     D: 500,
@@ -19,9 +19,14 @@ export const toRoman = n => {
     IV: 4,
     I: 1
   };
-  if (n === 1) {
-    return "I";
-  } else {
-    return "I" + "I";
+
+  for (let key in list) {
+    if (n === list[key]) {
+      return key;
+    }
+    console.log(n);
+    // else {
+    //   return key;
+    // }
   }
 };
