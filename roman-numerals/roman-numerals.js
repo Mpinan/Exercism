@@ -4,7 +4,7 @@
 //
 
 export const toRoman = n => {
-  let list = {
+  let romanList = {
     M: 1000,
     CM: 900,
     D: 500,
@@ -19,14 +19,14 @@ export const toRoman = n => {
     IV: 4,
     I: 1
   };
-
-  for (let key in list) {
-    if (n === list[key]) {
-      return key;
+  let romanNumber = "";
+  for (let key in romanList) {
+    while (n >= romanList[key]) {
+      console.log(n);
+      romanNumber += key;
+      n -= romanList[key];
+      // console.log("key: ", n);
     }
-    console.log(n);
-    // else {
-    //   return key;
-    // }
   }
+  return romanNumber;
 };
