@@ -22,10 +22,8 @@ export const toRoman = n => {
   let romanNumber = "";
   for (let key in romanList) {
     while (n >= romanList[key]) {
-      console.log(n);
       romanNumber += key;
       n -= romanList[key];
-      // console.log("key: ", n);
     }
   }
   return romanNumber;
