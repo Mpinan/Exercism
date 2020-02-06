@@ -16,15 +16,21 @@ export class Clock {
     return this.date;
   }
 
-  plus() {
-    throw new Error("Remove this statement and implement this function");
+  plus(n) {
+    this.date.setHours(this.hour, this.minutes + n);
+    this.date = this.date.toTimeString().slice(0, 5);
+    return this.date;
   }
 
-  minus() {
-    throw new Error("Remove this statement and implement this function");
+  minus(n) {
+    this.date.setHours(this.hour, this.minutes - n);
+    this.date = this.date.toTimeString().slice(0, 5);
+    return this.date;
   }
 
-  equals() {
-    throw new Error("Remove this statement and implement this function");
+  equals(clock) {
+    this.date.setHours(this.hour, this.minutes);
+    this.date = this.date.toTimeString().slice(0, 5);
+    return this.date == clock.toString();
   }
 }
