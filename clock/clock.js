@@ -4,23 +4,27 @@
 //
 
 export class Clock {
-  constructor() {
-    throw new Error('Remove this statement and implement this function');
+  constructor(hour = 0, minutes = 0) {
+    this.hour = hour;
+    this.minutes = minutes;
+    this.date = new Date();
   }
 
   toString() {
-    throw new Error('Remove this statement and implement this function');
+    this.date.setHours(this.hour, this.minutes);
+    this.date = this.date.toTimeString().slice(0, 5);
+    return this.date;
   }
 
   plus() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error("Remove this statement and implement this function");
   }
 
   minus() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error("Remove this statement and implement this function");
   }
 
   equals() {
-    throw new Error('Remove this statement and implement this function');
+    throw new Error("Remove this statement and implement this function");
   }
 }
