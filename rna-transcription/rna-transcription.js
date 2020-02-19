@@ -3,6 +3,21 @@
 // convenience to get you started writing code faster.
 //
 
-export const toRna = () => {
-  throw new Error("Remove this statement and implement this function");
+export const toRna = nucletoide => {
+  let transciption = [];
+  nucletoide.split("").forEach(e => {
+    if (e === "C") {
+      transciption.push("G");
+    }
+    if (e === "G") {
+      transciption.push("C");
+    }
+    if (e === "T") {
+      transciption.push("A");
+    }
+    if (e === "A") {
+      transciption.push("U");
+    }
+  });
+  return transciption.join("");
 };
