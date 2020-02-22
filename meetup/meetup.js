@@ -3,6 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export const meetupDay = (day) =>  {
-  throw new Error("Remove this statement and implement this function");
-}
+export const meetupDay = day => {
+  return day;
+};
