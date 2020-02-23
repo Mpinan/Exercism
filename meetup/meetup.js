@@ -3,6 +3,6 @@
 // convenience to get you started writing code faster.
 //
 
-export const meetupDay = day => {
+export const meetupDay = (year, month, day, ending) => {
   return day;
 };
